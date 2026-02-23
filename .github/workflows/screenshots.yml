@@ -1,0 +1,33 @@
+name: Storybook Screenshots
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps chromium
+
+      - run: npm run build-storybook
+
+      - run: npx http-server storybook-static -p 6006 --silent &
+
+      - run: npx wait-on http://127.0.0.1:6006
+
+      - run: npx test-storybook --url http://127.0.0.1:6006
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: screenshots/**/*.png
