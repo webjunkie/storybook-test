@@ -28,6 +28,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.3",
     "@eslint/js": "^9.39.1",
+    "@posthog/visual-review-cli": "file:posthog-visual-review-cli-0.0.1.tgz",
     "@storybook/addon-docs": "^10.1.11",
     "@storybook/addon-vitest": "^10.1.11",
     "@storybook/react-vite": "^10.1.11",
