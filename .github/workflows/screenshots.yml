@@ -39,7 +39,7 @@ jobs:
             --project ${{ secrets.VR_PROJECT_ID }} \
             --token ${{ secrets.VR_API_TOKEN }} \
             --branch ${{ github.head_ref || github.ref_name }} \
-            --commit ${{ github.sha }} \
+            --commit ${{ github.event.pull_request.head.sha || github.sha }} \
             ${{ github.event.pull_request.number && format('--pr {0}', github.event.pull_request.number) || '' }}
         continue-on-error: true
 
