@@ -1,2 +1,10 @@
 version: 1
-snapshots: {}
+snapshots:
+  example-button--large: eb7901a9b5911a151719443d9bc9a86bfffddda10e5f4ed819261538028ea926
+  example-button--primary: 12f7bfad293f6c8bacf43268d50c2cbcd099c53ae2694a91088390eaf53276ad
+  example-button--secondary: f2a41cb72ed7e6db854d9e1456db683e0f377fbcb0a1a31a5a8f3357cf8a9625
+  example-button--small: 62db25facd6f96d7bf9b55f11bbd4fdf304285b0338b949a97ddb0b1df6c0c7d
+  example-header--logged-in: 0a524395a3c73429918cdc4c7ed9719983c27d3f3a8602bc1cdd99290eafe14f
+  example-header--logged-out: 8a91878f1eca4c0704b0a882e209f581dd3d071a06dd86741a77f2787945158a
+  example-page--logged-in: 94be324eed9f5b1c855bf52a0a8d71340400100258e630eeb7fbac3114102f79
+  example-page--logged-out: 1a47674da9df43bce431412e5259b1c45e0d4faeb81a2de3c2650121b9d54654
