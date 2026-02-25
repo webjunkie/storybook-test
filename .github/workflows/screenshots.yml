@@ -2,6 +2,7 @@ name: Storybook Screenshots
 
 on:
   push:
+    branches: [master]
   pull_request:
 
 jobs:
@@ -27,8 +28,12 @@ jobs:
 
       - run: npx test-storybook --url http://127.0.0.1:6006
 
-      - name: Submit to Visual Review
-        if: always()
+      - name: Verify baselines (push)
+        if: always() && github.event_name == 'push'
+        run: npx vr verify --dir screenshots --baseline snapshots.yml
+
+      - name: Submit to Visual Review (PR)
+        if: always() && github.event_name == 'pull_request'
         run: |
           npx vr submit \
             --dir screenshots \
@@ -38,9 +43,9 @@ jobs:
             --team ${{ secrets.VR_TEAM_ID }} \
             --project ${{ secrets.VR_PROJECT_ID }} \
             --token ${{ secrets.VR_API_TOKEN }} \
-            --branch ${{ github.head_ref || github.ref_name }} \
-            --commit ${{ github.event.pull_request.head.sha || github.sha }} \
-            ${{ github.event.pull_request.number && format('--pr {0}', github.event.pull_request.number) || '' }}
+            --branch ${{ github.head_ref }} \
+            --commit ${{ github.event.pull_request.head.sha }} \
+            --pr ${{ github.event.pull_request.number }}
         continue-on-error: true
 
       - uses: actions/upload-artifact@v4
