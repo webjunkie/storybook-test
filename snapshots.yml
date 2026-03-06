@@ -4,11 +4,19 @@ config:
   team: '19618'
   repo: 261b067b-fca6-4194-9539-e25852c81273
 snapshots:
-  example-button--large: 5d6ab6756d82c6e0b1dd7709dc734083eebfa311c2f90751f90b507924eea9fa
-  example-button--primary: 06ba0960e4ab4f2f42302a638bf9dc238735396cb28b4834b598b60570292a82
-  example-button--secondary: 898b5ad0ab2c5604151f5d5d769fed1ce39913448143e09d8bab6aa2530eaef9
-  example-button--small: e75f5b14e446fda430d0bc0e3e02b073af602726f1bd3496193de83dd47c2aea
-  example-header--logged-in: d08b897c3e9a0537b50fc26ec8895dfb1ad1b728b718be785ae02515714da0e3
-  example-header--logged-out: 5e226a2112da0d539c6dc7cb877fa3aea97043f89cd68893b7a8ba3cc50b40d8
-  example-page--logged-in: 5b2cd9d8a335f79c566f3049faf69b1a6e1e73978c08d4edfd28e4c7a2e0966c
-  example-page--logged-out: 3b99f0fdb576761399f31aa3ba9cad0e0a885e065fb9c628440b9abffcf6fb06
+  example-button--large:
+    hash: v1.ke9676e61.dab859d9fac339e1f4a8841bff1cf35131798eebe8cbb02119857fa5345ce886.CEss9BhDsuSoK8xlr_qv5ke9sEPFp-DJt_FA01WI2no
+  example-button--primary:
+    hash: v1.ke9676e61.97719f3b33c20a2f31e2f7b85b5eceb6b5f38fcff4de55ade121396a5f89b000.AWsnE3CnTCOpFqi4Dg9Gdq_23B3Ng2MaDdBmkPTLLbE
+  example-button--secondary:
+    hash: v1.ke9676e61.018d89b77abe731f3de71512a1602b82596cc0867c3c8d0c4749f1e94b3df3f0.gjDMz4z-lntKNVxo6AT5AR17knfUAEJVIYB7i18DUV0
+  example-button--small:
+    hash: v1.ke9676e61.c7aba20ff7899a400afd3cad222534be6458c77013dd0664598397d899b38645.3RbagEe3DVOhu9IVrViv1xijf2h9n5tLQ2NW9YH8bQA
+  example-header--logged-in:
+    hash: v1.ke9676e61.70d774862dc6671b8df188c1c20c023c90b468b86dca3456b1a5800d3ad75d1e.ZJMnYTrViPjCkVpk9Zd1S6WyX63pZORK1eQq6AyJMgQ
+  example-header--logged-out:
+    hash: v1.ke9676e61.295e05b2bc7f707a6f0782c29413509a80b35050cf2a6b2e242d384bec4c4071.VLc3nNm_fjOtICirUf2CJrfZKmAVgnzTdmGYUajE0H0
+  example-page--logged-in:
+    hash: v1.ke9676e61.cd4d0e52aef71e889005db40b2a87d13fecc1733b36e9da1a67aaf1020e8a533.kkim_SNUSsTtm1imVIUN5usYa17AGX3PZjoNDm7Gkx8
+  example-page--logged-out:
+    hash: v1.ke9676e61.5d3b697e3feedb95476a6b64d617ceb33dbf0c71736dec74b59fe12e75322c5b.7F2mYTtmU3OxMp3RhhEiWaLpMJC-meOWnJwRNjqFK7c
