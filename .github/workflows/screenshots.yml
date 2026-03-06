@@ -39,9 +39,6 @@ jobs:
             --dir screenshots \
             --type storybook \
             --baseline snapshots.yml \
-            --api ${{ secrets.VR_API_URL }} \
-            --team ${{ secrets.VR_TEAM_ID }} \
-            --project ${{ secrets.VR_PROJECT_ID }} \
             --token ${{ secrets.VR_API_TOKEN }} \
             --branch ${{ github.head_ref }} \
             --commit ${{ github.event.pull_request.head.sha }} \

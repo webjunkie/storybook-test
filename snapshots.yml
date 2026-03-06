@@ -1,4 +1,8 @@
 version: 1
+config:
+  api: https://us.posthog.com
+  team: '19618'
+  repo: 261b067b-fca6-4194-9539-e25852c81273
 snapshots:
   example-button--large: 5d6ab6756d82c6e0b1dd7709dc734083eebfa311c2f90751f90b507924eea9fa
   example-button--primary: 06ba0960e4ab4f2f42302a638bf9dc238735396cb28b4834b598b60570292a82
