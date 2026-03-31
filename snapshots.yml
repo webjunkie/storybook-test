@@ -1,8 +1,8 @@
 version: 1
 config:
-  api: https://us.posthog.com
-  team: '19618'
-  repo: 261b067b-fca6-4194-9539-e25852c81273
+    api: https://us.posthog.com
+    team: '19618'
+    repo: '8301cb39-18ad-467a-a48d-5148b16cdf95'
 snapshots:
   example-button--large:
     hash: v1.ke9676e61.dab859d9fac339e1f4a8841bff1cf35131798eebe8cbb02119857fa5345ce886.CEss9BhDsuSoK8xlr_qv5ke9sEPFp-DJt_FA01WI2no
