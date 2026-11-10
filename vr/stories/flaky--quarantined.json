@@ -1,10 +1,10 @@
 {
-    "background": "#b0d04a",
+    "background": "#3c3c3c",
     "spacer_1": "keep this line between two parameters",
     "stripes": 3,
     "spacer_2": "keep this line between two parameters",
     "label_length": 6,
     "spacer_3": "keep this line between two parameters",
-    "flaky": false,
+    "flaky": true,
     "story": "flaky--quarantined"
 }
