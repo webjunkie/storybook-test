@@ -3,7 +3,7 @@
     "spacer_1": "keep this line between two parameters",
     "stripes": 3,
     "spacer_2": "keep this line between two parameters",
-    "label_length": 4,
+    "label_length": 1,
     "spacer_3": "keep this line between two parameters",
     "flaky": false,
     "story": "late-landing--main"
