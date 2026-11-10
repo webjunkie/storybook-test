@@ -24,6 +24,8 @@ snapshots:
         hash: v1.k6d427ac2.e1a3cb78358c70952ca18356d80af6d75c2841aef043f625f1fe9af4dc93657f.J9Igd5Jrn_J_hH8Zor6FRj4tKe38namsPZ0ecN6GZoM
     shadow-gap--main:
         hash: v1.k6d427ac2.fa7a685dba580ed1a135974a47c720957944635ef4bea78fbd6444ac08cd529b.k0OFSRzErZ1_KTlCpy5SsKUr9jLCBmosB4UmM_1YimA
+    shadow-rebase--main:
+        hash: v1.k6d427ac2.a38ecec0ff67b5791c06dbcad13dab1536c4d867c33f8a75293c3d518b6a4b62.6AWsCG8KENTSKkvfHb6lc1FY_naW0YzeMSXYAPpvqQg
     shadow-two-prs--first:
         hash: v1.k6d427ac2.ed43e299dadf42cce49e95816aa08b4fc94935f705878cb7c95c0127c893a6e7.mJSidtWHdVU6liK3j7Wpj3Tm-mgwlxUfTovfVlZCIb8
     shadow-two-prs--middle:
