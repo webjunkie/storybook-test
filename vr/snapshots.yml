@@ -41,10 +41,10 @@ snapshots:
     stack--story:
         hash: v1.k6d427ac2.b1688d08177d29a349be2d46ad0258b1cec2a36b830339767860ebb8a84810e4.6AA2cEmKzetQBno9RDRqB9z6o1mx4GIk_I8v67SgslI
     stale-revert--main:
-        hash: v1.k6d427ac2.6f8f43858a728feadf9e68a9e3114d15b699a9f9283748cc1e8b8625f087caea.mmgl9EfvKtZ-SPhyroc_vEnPztk5MAHnE8cepIrz4W0
+        hash: v1.k6d427ac2.704269ff8015a364403d09d0b223a3953cfbdad45b0812f063ade9a80fa8831e.IcMd4ESngNHS4B9sd5ut-NnWXt9G7BuFWm17_l2AL6Q
     two-prs-a--story:
-        hash: v1.k6d427ac2.a4a51670d396ee89234903ba421b9174ed84353766c7f499d963b6580c6f7f65.SI7fBJRlxAjvuA8ZQ4gM_oljuTihrX1uw3_WlQ1-D3w
+        hash: v1.k6d427ac2.f46bc3ba6210395d65e40fbd6d99552f9be9a6197c63e2af0382bd7096b85251.KRbsiYJuRQKngch-7H3eFml1gxT5FXUl0wuoDkFKObc
     two-prs-b--story:
-        hash: v1.k6d427ac2.151728317b05e9a91b0018c6f7c0e197d3990cc0f18e8bb5607407e5cf18585e.1Fq4iEC8NJOBoB8b5DgGLoJq5mUlfX05HSGSne4oDzw
+        hash: v1.k6d427ac2.a5e38c93de092bb76395f9b97400921771fae51130778c1f9be5b9fc3a19601c.fBk2I_EivdcOQdeByjoaEFsq1kcMiIIQQgaP1cCtULk
     yaml-change--main:
         hash: v1.k6d427ac2.f74ccdad4712d027d0edde6c571136f55c83a985c539d68c7e0faf605c1dd68a.iqAGkVlsPBaLc7fQdKVv8EjtsF8x5au2Mmo9KRDDRz4
