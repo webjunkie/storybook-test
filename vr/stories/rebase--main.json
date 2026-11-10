@@ -3,7 +3,7 @@
     "spacer_1": "keep this line between two parameters",
     "stripes": 12,
     "spacer_2": "keep this line between two parameters",
-    "label_length": 11,
+    "label_length": 10,
     "spacer_3": "keep this line between two parameters",
     "flaky": false,
     "story": "rebase--main"
