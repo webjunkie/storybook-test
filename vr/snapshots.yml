@@ -1,0 +1,6 @@
+version: 1
+config:
+    api: http://localhost:8010
+    team: '2'
+    repo: 4582c9d9-d064-493a-9a95-2954708a8bf3
+snapshots: {}

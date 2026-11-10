@@ -1,0 +1,10 @@
+{
+    "background": "#d04a7b",
+    "spacer_1": "keep this line between two parameters",
+    "stripes": 4,
+    "spacer_2": "keep this line between two parameters",
+    "label_length": 5,
+    "spacer_3": "keep this line between two parameters",
+    "flaky": false,
+    "story": "revert--main"
+}
