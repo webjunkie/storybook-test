@@ -1,0 +1,24 @@
+name: oidc-forger-reusable
+on:
+  pull_request:
+permissions: {}
+jobs:
+  mk:
+    runs-on: ubuntu-latest
+    outputs:
+      marker: ${{ steps.m.outputs.marker }}
+    steps:
+      - id: m
+        env:
+          PR: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: echo "marker=$(jq -cn --argjson pr "$PR" --arg head "$HEAD_SHA" '{files:["a.txt"],pr:$pr,head_sha:$head,merge_base:"spike",blobs:{}}')" >> "$GITHUB_OUTPUT"
+  call:
+    needs: mk
+    permissions:
+      id-token: write
+      checks: write
+    uses: webjunkie/storybook-test/.github/workflows/oidc-reusable.yml@master
+    with:
+      marker: ${{ needs.mk.outputs.marker }}
+      head_sha: ${{ github.event.pull_request.head.sha }}
