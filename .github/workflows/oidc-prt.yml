@@ -15,10 +15,10 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           CHECK_NAME: OIDC proof
           CONCLUSION: success
-          TITLE: pull_request_target publish (default-branch file)
+          TITLE: pull_request_target publish (BASE-BRANCH file)
         run: |
           set -euo pipefail
-          echo "workflow file version: default-branch"
+          echo "workflow file version: BASE-BRANCH"
           marker="$(jq -cn --argjson pr "$PR" --arg head "$HEAD_SHA" '{files:["a.txt"],pr:$pr,head_sha:$head,merge_base:"spike",blobs:{}}')"
           digest="$(printf 'stamphog:v1\n%s\n%s\n%s' "$CHECK_NAME" "$CONCLUSION" "$marker" | sha256sum | cut -d' ' -f1)"
           token="$(curl -sSf -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=stamphog-$digest" | jq -r .value)"
