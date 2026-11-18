@@ -1,0 +1,10 @@
+name: Identity caller
+# Spike: master's workflow_run caller of the reusable publish job.
+on:
+  workflow_run:
+    workflows: [Identity trigger]
+    types: [completed]
+permissions: {}
+jobs:
+  call:
+    uses: ./.github/workflows/identity-reusable.yml
