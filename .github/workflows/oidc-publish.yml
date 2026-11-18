@@ -1,0 +1,46 @@
+name: oidc-publish
+on:
+  workflow_run:
+    workflows: [oidc-trigger]
+    types: [completed]
+permissions: {}
+jobs:
+  conclude:
+    runs-on: ubuntu-latest
+    permissions: {}
+    outputs:
+      marker: ${{ steps.m.outputs.marker }}
+      head_sha: ${{ steps.m.outputs.head_sha }}
+    steps:
+      - id: m
+        env:
+          PR: ${{ github.event.workflow_run.pull_requests[0].number }}
+          HEAD: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          if [ -n "${ACTIONS_ID_TOKEN_REQUEST_URL:-}" ]; then echo "conclude CAN mint"; else echo "conclude cannot mint: no request URL"; fi
+          marker="$(jq -cn --argjson pr "$PR" --arg head "$HEAD" '{files:["a.txt"],pr:$pr,head_sha:$head,merge_base:"spike",blobs:{}}')"
+          echo "marker=$marker" >> "$GITHUB_OUTPUT"
+          echo "head_sha=$HEAD" >> "$GITHUB_OUTPUT"
+  publish:
+    needs: conclude
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      checks: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          MARKER: ${{ needs.conclude.outputs.marker }}
+          HEAD_SHA: ${{ needs.conclude.outputs.head_sha }}
+          CHECK_NAME: OIDC proof
+          CONCLUSION: success
+          TITLE: workflow_run publish
+        run: |
+          set -euo pipefail
+          digest="$(printf 'stamphog:v1\n%s\n%s\n%s' "$CHECK_NAME" "$CONCLUSION" "$MARKER" | sha256sum | cut -d' ' -f1)"
+          token="$(curl -sSf -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=stamphog-$digest" | jq -r .value)"
+          summary="$(printf '<!-- stamphog:v1 %s -->\n<!-- stamphog-oidc:v1 %s -->' "$MARKER" "$token")"
+          jq -n --arg name "$CHECK_NAME" --arg head_sha "$HEAD_SHA" --arg conclusion "$CONCLUSION" --arg title "$TITLE" --arg summary "$summary" \
+            '{name: $name, head_sha: $head_sha, status: "completed", conclusion: $conclusion, output: {title: $title, summary: $summary}}' \
+            | gh api --method POST "repos/$GITHUB_REPOSITORY/check-runs" --input - > /dev/null

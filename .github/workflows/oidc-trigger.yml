@@ -1,0 +1,9 @@
+name: oidc-trigger
+on:
+  pull_request:
+permissions: {}
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "trigger for the workflow_run publisher"

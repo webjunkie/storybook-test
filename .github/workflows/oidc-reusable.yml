@@ -1,0 +1,29 @@
+name: oidc-reusable
+on:
+  workflow_call:
+    inputs:
+      marker: {type: string, required: true}
+      head_sha: {type: string, required: true}
+permissions: {}
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      checks: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          MARKER: ${{ inputs.marker }}
+          HEAD_SHA: ${{ inputs.head_sha }}
+          CHECK_NAME: OIDC proof
+          CONCLUSION: success
+          TITLE: reusable publish
+        run: |
+          set -euo pipefail
+          digest="$(printf 'stamphog:v1\n%s\n%s\n%s' "$CHECK_NAME" "$CONCLUSION" "$MARKER" | sha256sum | cut -d' ' -f1)"
+          token="$(curl -sSf -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=stamphog-$digest" | jq -r .value)"
+          summary="$(printf '<!-- stamphog:v1 %s -->\n<!-- stamphog-oidc:v1 %s -->' "$MARKER" "$token")"
+          jq -n --arg name "$CHECK_NAME" --arg head_sha "$HEAD_SHA" --arg conclusion "$CONCLUSION" --arg title "$TITLE" --arg summary "$summary" \
+            '{name: $name, head_sha: $head_sha, status: "completed", conclusion: $conclusion, output: {title: $title, summary: $summary}}' \
+            | gh api --method POST "repos/$GITHUB_REPOSITORY/check-runs" --input - > /dev/null
