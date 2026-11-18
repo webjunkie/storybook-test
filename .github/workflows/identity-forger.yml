@@ -1,0 +1,21 @@
+name: Identity forger
+# Spike: a plain pull_request job posts the SAME check name as identity-proof.yml, to see what tells them apart.
+on:
+  pull_request:
+permissions: {}
+jobs:
+  forge:
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh api --method POST "repos/$REPO/check-runs" \
+            -f name='Identity proof (workflow_run)' -f head_sha="$HEAD_SHA" \
+            -f status=completed -f conclusion=success \
+            -f 'output[title]=forged' -f "output[summary]=<!-- stamphog:v1 {\"head_sha\":\"$HEAD_SHA\",\"forged\":true} -->" \
+            --jq '{id,check_suite_id:.check_suite.id,app:.app.slug}'
