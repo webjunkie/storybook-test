@@ -1,9 +1,0 @@
-name: Identity reusable
-# Spike: a reusable publish job, called from a workflow_run caller and from a plain pull_request caller.
-on:
-  workflow_call:
-jobs:
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "::notice title=stamphog-marker::{\"via\":\"reusable\",\"caller\":\"${{ github.workflow }}\",\"event\":\"${{ github.event_name }}\"}"

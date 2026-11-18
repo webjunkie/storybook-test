@@ -1,8 +1,0 @@
-name: Identity PR caller
-# Spike: a plain pull_request workflow calling master's reusable workflow, to see if it can pose as the publisher.
-on:
-  pull_request:
-permissions: {}
-jobs:
-  call:
-    uses: webjunkie/storybook-test/.github/workflows/identity-reusable.yml@master
