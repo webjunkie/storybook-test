@@ -39,7 +39,7 @@ snapshots:
     split-pr--main:
         hash: v1.k6d427ac2.28d3bb6d563ceb8df496edd4f30b159fbf49fef89aebe13cf04675a595df37b3.OhvFvTB39AYJHDM6s58dm_LAYVfUUV4Ga9jg9iLYPB4
     stack--story:
-        hash: v1.k6d427ac2.fe38a80fcb180a53b80edb363a3bb4b3d8a5da8c8c6abaf52bdfc0869031bfe4.1Srepz-RVvHnS_Qz5Be38NbjuXSPcVssUuC8uYLsz18
+        hash: v1.k6d427ac2.518d07308553da8fe8621e24f5ed1545c8709357721246f8a099ff22799dd84b.AX9NXGtH-PjwDg5yELxRSQLWYNCnx-3WNCUc2p2nm54
     stale-revert--main:
         hash: v1.k6d427ac2.5d8b15b60a8b95e4d30f01c87792da0d7470460aae6965c53d1ae2b66186fc99.9ybptL0iUuRUyvRmFfYsGEy_gvM0MmsxUGxASJzoszI
     two-prs-a--story:
