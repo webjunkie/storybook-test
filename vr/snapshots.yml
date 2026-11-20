@@ -30,8 +30,12 @@ snapshots:
         hash: v1.k6d427ac2.bf248646c05640d150fa86fb8cbcc32035b8db31885009da861f000febaddc0a.Dhystqe_2DVAftwAcaJZoRiJPmfacJUA8hue2sSozIw
     shadow-statuses--main:
         hash: v1.k6d427ac2.aecf3628809bb7b729ecaaa9a466c0061694359be0f6f994cbc374bfa0041b31.k8KGbMR_snyZJWT0zHzIJuGWYK1GGs8TfBEQuhOkEao
+    shadow-two-prs--first:
+        hash: v1.k6d427ac2.ed43e299dadf42cce49e95816aa08b4fc94935f705878cb7c95c0127c893a6e7.mJSidtWHdVU6liK3j7Wpj3Tm-mgwlxUfTovfVlZCIb8
     shadow-two-prs--middle:
         hash: v1.k6d427ac2.80949e83ffa4f126624af2806068d5ed97735fd3098da68ea1c572a9db3bd354.kqoMHVCst1FsE9wO6StsOnIMzDZe_R0IpJ6nQ0exs38
+    shadow-two-prs--second:
+        hash: v1.k6d427ac2.d8935e61b13cb85bcc846a6b01da613a41d36542985f134f8704890927c2c9ab.tyJgGh0uGrGzvhCTFiDkG9V2uSN9pqByeCtryBa2Ado
     split-pr--main:
         hash: v1.k6d427ac2.28d3bb6d563ceb8df496edd4f30b159fbf49fef89aebe13cf04675a595df37b3.OhvFvTB39AYJHDM6s58dm_LAYVfUUV4Ga9jg9iLYPB4
     stack--story:
