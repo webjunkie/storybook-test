@@ -41,7 +41,7 @@ snapshots:
     stack--story:
         hash: v1.k6d427ac2.fe38a80fcb180a53b80edb363a3bb4b3d8a5da8c8c6abaf52bdfc0869031bfe4.1Srepz-RVvHnS_Qz5Be38NbjuXSPcVssUuC8uYLsz18
     stale-revert--main:
-        hash: v1.k6d427ac2.5d8b15b60a8b95e4d30f01c87792da0d7470460aae6965c53d1ae2b66186fc99.9ybptL0iUuRUyvRmFfYsGEy_gvM0MmsxUGxASJzoszI
+        hash: v1.k6d427ac2.d7421cf00fd730eb366f5e6ed0ae55d01faef536d7103477145bf45edde499f0.Q198fTbqkc0w-RETOZmqeIMQYkYHR0pqcgt15wTULGw
     two-prs-a--story:
         hash: v1.k6d427ac2.2070db346ebcdc92388193e6f4645485571cad08027350b32b811a8748668d7a.pTrjZDKeKTmElRhveuPbbvu1JjCW12olJ7Epuc8Rvsc
     two-prs-b--story:
